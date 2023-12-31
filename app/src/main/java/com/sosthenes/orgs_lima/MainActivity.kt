@@ -2,6 +2,7 @@
 //Inserir Nome do Pacote
 // Patos Bons - 29/12/2023
 // Juazero do norte - CE 30/12/2023
+// Maragogi - AL - 31/12/2023
 package com.sosthenes.orgs_lima
 
 import android.app.Activity
@@ -19,7 +20,7 @@ class MainActivity: Activity() {
             val nome = findViewById<TextView>(R.id.nome)
             nome.setText("cesta de frutas")
             val descricao = findViewById<TextView>(R.id.descricao)
-            descricao.setText("Tangirina, manga, uva")
+            descricao.setText("Tangirina, manga, morango")
             val valor = findViewById<TextView>(R.id.valor)
             valor.setText("19.99")
     }
