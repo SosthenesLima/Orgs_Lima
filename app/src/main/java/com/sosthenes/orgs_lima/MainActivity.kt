@@ -4,6 +4,8 @@
 // Juazero do norte - CE 30/12/2023
 // Maragogi - AL - 31/12/2023
 // Tamandaré - PE - 01/01/2024
+// Tamandaré - PE - 02/01/2024
+
 package com.sosthenes.orgs_lima
 
 import android.app.Activity
@@ -23,7 +25,7 @@ class MainActivity: Activity() {
             val descricao = findViewById<TextView>(R.id.descricao)
             descricao.setText("Tangirina, manga, morango")
             val valor = findViewById<TextView>(R.id.valor)
-            valor.setText("39.99")
+            valor.setText("29.99")
     }
 
 }
