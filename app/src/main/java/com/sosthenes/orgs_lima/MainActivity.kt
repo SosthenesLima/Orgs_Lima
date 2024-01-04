@@ -7,6 +7,7 @@
 // Tamandaré - PE - 02/01/2024
 // Tamandaré - PE - 03/01/2024
 // Porto de Galinhas - PE - 03/01/2024
+// Porto de Galinhas - PE - 04/01/2024
 
 package com.sosthenes.orgs_lima
 
@@ -25,9 +26,9 @@ class MainActivity: Activity() {
             val nome = findViewById<TextView>(R.id.nome)
             nome.setText("cesta de frutas")
             val descricao = findViewById<TextView>(R.id.descricao)
-            descricao.setText("Tangirina, manga, morango, pera")
+            descricao.setText("Tangirina, manga, morango, pera, melão")
             val valor = findViewById<TextView>(R.id.valor)
-            valor.setText("59.00")
+            valor.setText("79.00")
     }
 
 }
