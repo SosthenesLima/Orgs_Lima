@@ -9,6 +9,7 @@
 // Porto de Galinhas - PE - 03/01/2024
 // Porto de Galinhas - PE - 04/01/2024
 // Ouricuri - PE - 05/01/2024
+// Balsas - MA - 06/01/2024
 
 package com.sosthenes.orgs_lima
 
@@ -29,7 +30,7 @@ class MainActivity: Activity() {
             val descricao = findViewById<TextView>(R.id.descricao)
             descricao.setText("Tangirina, manga, morango, pera, melão, Jaca")
             val valor = findViewById<TextView>(R.id.valor)
-            valor.setText("79.00")
+            valor.setText("69.00")
     }
 
 }
