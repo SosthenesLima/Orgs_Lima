@@ -24,15 +24,15 @@ class MainActivity : Activity() {
         recyclerView.adapter = ListaProdutosAdapter(context = this, produtos = listOf(
                 Produto(nome = "teste",
                         descricao = "teste desc",
-                        valor = BigDecimal("29.99")
+                        valor = BigDecimal("19.99")
                 ),
                 Produto(nome = "teste 1",
                         descricao = "teste desc 1",
-                        valor = BigDecimal("39.99")
+                        valor = BigDecimal("29.99")
                 ),
                 Produto(nome = "teste 2",
                         descricao = "teste desc 2",
-                        valor = BigDecimal("59.99")
+                        valor = BigDecimal("39.99")
                 ),
         ))
 //        recyclerView.layoutManager = LinearLayoutManager(this)
