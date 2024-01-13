@@ -10,6 +10,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Nome"
+        android:inputType="text"
         android:layout_margin="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,6 +21,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Descrição"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@id/nome"
         app:layout_constraintStart_toStartOf="@id/nome"
         app:layout_constraintTop_toBottomOf="@id/nome"/>
@@ -28,6 +30,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Valor"
+        android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="@id/descricao"
         app:layout_constraintStart_toStartOf="@id/descricao"
         app:layout_constraintTop_toBottomOf="@id/descricao"/>
