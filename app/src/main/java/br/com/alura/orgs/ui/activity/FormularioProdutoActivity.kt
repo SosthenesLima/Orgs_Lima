@@ -2,6 +2,7 @@ package br.com.alura.orgs.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
@@ -13,15 +14,12 @@ class FormularioProdutoActivity :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
-        botaoSalvar.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                val campoNome = findViewById<EditText>(R.id.nome)
-                val nome = campoNome.text.toString()
-                Log.i("FormularioProduto", "onCreate: $nome")
-            }
-        })
+        val campoNome = findViewById<EditText>(R.id.nome)
+        val nome = campoNome.text.toString()
+        Log.i("FormularioProduto", "onCreate: $nome")
     }
+
+
+
 
 }
