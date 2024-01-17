@@ -14,9 +14,16 @@ class FormularioProdutoActivity :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val campoNome = findViewById<EditText>(R.id.nome)
-        val nome = campoNome.text.toString()
-        Log.i("FormularioProduto", "onCreate: $nome")
+
+        val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
+        botaoSalvar.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(p0: View?) {
+                val campoNome = findViewById<EditText>(R.id.nome)
+                val nome = campoNome.text.toString()
+                Log.i("FormularioProduto", "onCreate: $nome")
+
+            }
+        })
     }
 
 
