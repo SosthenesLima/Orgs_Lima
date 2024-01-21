@@ -16,6 +16,8 @@ import java.math.BigDecimal
 @Suppress("UNUSED_EXPRESSION")
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
+    Data
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
