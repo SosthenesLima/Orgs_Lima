@@ -1,6 +1,17 @@
 package br.com.alura.orgs.dao
 
-class ProdutosDao {
-    
+import br.com.alura.orgs.model.Produto
 
+class ProdutosDao {
+
+    private val produtos = mutableListOf<Produto>()
+
+    fun adciona(produto: Produto){
+        produtos.add(produto)
+
+    }
+    fun buscaTodos() : List<Produto>{
+        return produtos.toList()
+
+    }
 }
