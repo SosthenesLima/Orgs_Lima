@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.service.controls.actions.FloatAction
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,7 +15,7 @@ import br.com.alura.orgs.ui.recyclerview.adapter.ListaProdutosAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import java.math.BigDecimal
 
-@Suppress("UNUSED_EXPRESSION")
+
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         super.onCreate(savedInstanceState)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
         val dao = ProdutosDao()
+        Log.i(tag:"MainActivity", msg: "onCreate: ${dao.buscaTodos()}")
         recyclerView.adapter = ListaProdutosAdapter(context = this, produtos = dao.buscaTodos())
         val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton3)
         fab.setOnClickListener {
