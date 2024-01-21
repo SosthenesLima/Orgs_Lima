@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import br.com.alura.orgs.R
+import br.com.alura.orgs.dao.ProdutosDao
 import br.com.alura.orgs.model.Produto
 import java.math.BigDecimal
 
@@ -32,14 +33,16 @@ class FormularioProdutoActivity :
                     BigDecimal(valoremTexto)
                 }
 
-                val ProdutoNovo = Produto(
+                val produtoNovo = Produto(
                     nome = nome,
                     descricao = descricao,
                     valor = valor
                 )
 
-                Log.i("FormularioProduto", "onCreate: $ProdutoNovo")
-
+                Log.i("FormularioProduto", "onCreate: $produtoNovo")
+                val dao= ProdutosDao()
+                dao.adciona(produtoNovo)
+                Log.i("FormularioProduto", "onCreate: ${dao.buscaTodos()}")
             }
         })
     }
