@@ -4,8 +4,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "br.com.alura.orgs"
@@ -30,6 +29,7 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    namespace 'br.com.alura.orgs'
 }
 
 dependencies {
