@@ -18,21 +18,24 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         configuraRecyclerView()
-
+        configuraFab()
     }
 
     override fun onResume() {
         super.onResume()
         adapter.atualiza(dao.buscaTodos())
-        configuraFab()
     }
 
     private fun configuraFab() {
         val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         fab.setOnClickListener {
-            val intent = Intent(this, FormularioProdutoActivity::class.java)
-            startActivity(intent)
+            vaiParaFormularioProduto()
         }
+    }
+
+    private fun vaiParaFormularioProduto() {
+        val intent = Intent(this, FormularioProdutoActivity::class.java)
+        startActivity(intent)
     }
 
     private fun configuraRecyclerView() {
@@ -40,5 +43,4 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
         //Log.i("MainActivity", "onCreate: ${dao.buscaTodos()}")
         recyclerView.adapter = adapter
     }
-
 }
