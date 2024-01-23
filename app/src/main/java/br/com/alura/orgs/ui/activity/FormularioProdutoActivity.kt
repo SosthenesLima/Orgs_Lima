@@ -42,12 +42,12 @@ class FormularioProdutoActivity :
         } else {
             BigDecimal(valorEmTexto)
         }
-        val produtoNovo = Produto(
+        
+        return Produto(
             nome = nome,
             descricao = descricao,
             valor = valor
         )
-        return produtoNovo
     }
 
 }
