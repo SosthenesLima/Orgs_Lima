@@ -18,7 +18,7 @@ class FormularioProdutoActivity :
     }
 
     private fun configuraBotaoSalvar() {
-        val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
+        val botaoSalvar = findViewById<Button>(R.id.actitivy_formulario_produto_botao_salvar)
         val dao = ProdutosDao()
         botaoSalvar.setOnClickListener {
             val produtoNovo = criaProduto()
@@ -30,11 +30,11 @@ class FormularioProdutoActivity :
     }
 
     private fun criaProduto(): Produto {
-        val campoNome = findViewById<EditText>(R.id.produto_item_nome)
+        val campoNome = findViewById<EditText>(R.id.actitivy_formulario_produto_nome)
         val nome = campoNome.text.toString()
-        val campoDescricao = findViewById<EditText>(R.id.produto_item_descricao)
+        val campoDescricao = findViewById<EditText>(R.id.actitivy_formulario_produto_descricao)
         val descricao = campoDescricao.text.toString()
-        val campoValor = findViewById<EditText>(R.id.produto_item_valor)
+        val campoValor = findViewById<EditText>(R.id.actitivy_formulario_produto_valor)
         val valorEmTexto = campoValor.text.toString()
         val valor = if (valorEmTexto.isBlank()) {
             BigDecimal.ZERO

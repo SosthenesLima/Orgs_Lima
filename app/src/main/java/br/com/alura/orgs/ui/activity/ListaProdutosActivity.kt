@@ -27,7 +27,7 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
     }
 
     private fun configuraFab() {
-        val fab = findViewById<FloatingActionButton>(R.id.floatingActionButton)
+        val fab = findViewById<FloatingActionButton>(R.id.actitivy_lista_produto_fab)
         fab.setOnClickListener {
             vaiParaFormularioProduto()
         }
@@ -39,7 +39,7 @@ class ListaProdutosActivity : AppCompatActivity(R.layout.activity_lista_produtos
     }
 
     private fun configuraRecyclerView() {
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        val recyclerView = findViewById<RecyclerView>(R.id.actitivy_lista_produto_recyclerView)
         //Log.i("MainActivity", "onCreate: ${dao.buscaTodos()}")
         recyclerView.adapter = adapter
     }
