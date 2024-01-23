@@ -15,34 +15,39 @@ class FormularioProdutoActivity :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        configuraBotaoSalvar()
+    }
 
+    private fun configuraBotaoSalvar() {
         val botaoSalvar = findViewById<Button>(R.id.botao_salvar)
+        val dao = ProdutosDao()
         botaoSalvar.setOnClickListener {
-            val campoNome = findViewById<EditText>(R.id.nome)
-            val nome = campoNome.text.toString()
-            val campoDescricao = findViewById<EditText>(R.id.descricao)
-            val descricao = campoDescricao.text.toString()
-            val campoValor = findViewById<EditText>(R.id.valor)
-            val valorEmTexto = campoValor.text.toString()
-            val valor = if(valorEmTexto.isBlank()) {
-                BigDecimal.ZERO
-            } else {
-                BigDecimal(valorEmTexto)
-            }
-
-
-            val produtoNovo = Produto(
-                nome = nome,
-                descricao = descricao,
-                valor = valor
-            )
-
-            Log.i("FormularioProduto", "onCreate: $produtoNovo")
-            val dao = ProdutosDao()
+            val produtoNovo = criaProduto()
+            //Log.i("FormularioProduto", "onCreate: $produtoNovo")
             dao.adiciona(produtoNovo)
-            Log.i("FormularioProduto", "onCreate: ${dao.buscaTodos()}")
+            //Log.i("FormularioProduto", "onCreate: ${dao.buscaTodos()}")
             finish()
         }
+    }
+
+    private fun criaproduto(): Produto {
+        val campoNome = findViewById<EditText>(R.id.nome)
+        val nome = campoNome.text.toString()
+        val campoDescricao = findViewById<EditText>(R.id.descricao)
+        val descricao = campoDescricao.text.toString()
+        val campoValor = findViewById<EditText>(R.id.valor)
+        val valorEmTexto = campoValor.text.toString()
+        val valor = if (valorEmTexto.isBlank()) {
+            BigDecimal.ZERO
+        } else {
+            BigDecimal(valorEmTexto)
+        }
+        val produtoNovo = Produto(
+            nome = nome,
+            descricao = descricao,
+            valor = valor
+        )
+        return produtoNovo
     }
 
 }
