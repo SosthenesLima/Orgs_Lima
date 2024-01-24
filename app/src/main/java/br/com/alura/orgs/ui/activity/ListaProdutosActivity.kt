@@ -1,5 +1,5 @@
 package br.com.alura.orgs.ui.activity
-
+// finalização do projeto - 23/01/2024
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
